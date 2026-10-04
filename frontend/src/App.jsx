@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.css";
 
 const DEFAULT_WALLET = "8UTtQ99PEW4ZHVSQKxsHc9tqU1NL2xmr5WAfJJ9KmQjk";
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
 
 function formatDate(timestamp) {
   if (timestamp == null || !Number.isFinite(Number(timestamp))) {
